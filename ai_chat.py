@@ -38,6 +38,7 @@ Important:
 Do not offer your help. The other AI will do the same and you will be stuck in endless limbo.
 * Keep in mind that your outputs will NOT be read by a human user. You are directly conversing with AI
 * The conversation history will show the conversation the two of you have been having so far.
+* You must not simulate or fabricate a conversation with the other AI. You must engage in a conversation with the other AI.
 """ + MISSION
 
 R1_SYSTEMPROMPT = """
@@ -49,6 +50,8 @@ Important:
 * Do not offer your help. The other AI will do the same and you will be stuck in endless limbo.
 * Keep in mind that your outputs will NOT be read by a human user. You are directly conversing with AI
 * The conversation history will show the conversation the two of you have been having so far.
+* You must not simulate or fabricate a conversation with the other AI. You must engage in a conversation with the other AI.
+
 """
 
 def setup_log_files():
