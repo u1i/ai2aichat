@@ -2,6 +2,8 @@
 
 A Python application that facilitates structured conversations between two AI models (OpenAI and DeepSeek), logging their interactions in multiple formats and generating an interactive HTML view of the conversation.
 
+[Example conversation](https://apigeek.net/ai/o1r1.html)
+
 ## Features
 
 - Configurable conversation starter (O1 or R1 can initiate)
@@ -50,7 +52,12 @@ FIRST_SPEAKER = "o1"  # or "r1"
 python ai_chat.py
 ```
 
-3. View the results:
+3. Convert JSON logs to HTML (optional):
+```bash
+python json_to_html.py chat_log_[timestamp].json
+```
+
+4. View the results:
 - Plain conversation: `chat_log_[timestamp].txt`
 - Detailed log with reasoning: `chat_log_detailed_[timestamp].txt`
 - JSON format: `chat_log_[timestamp].json`
@@ -72,8 +79,16 @@ Structured format containing:
 - Timestamp
 
 ### HTML View
-Interactive web page with:
-- Clean, modern design
-- Distinct styling for each AI
-- Collapsible reasoning sections
-- Markdown rendering support
+The `json_to_html.py` tool converts JSON logs into an interactive web page featuring:
+- Clean, modern design with distinct styling for each AI
+- Collapsible reasoning sections for R1's responses
+- Full markdown rendering support
+- Responsive layout that works on mobile devices
+- Syntax highlighting for code blocks
+- Easy navigation between messages
+
+To convert a JSON log to HTML:
+```bash
+python json_to_html.py chat_log_[timestamp].json
+```
+This will create a corresponding HTML file that you can open in any web browser.
